@@ -29,7 +29,6 @@ on:
         required: true
         default: 'android'
 
-
 #      reAttempt:
 #        description: 'Number of re-attempts'
 #        default: '3'
