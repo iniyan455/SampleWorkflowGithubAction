@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         val txtConfig = findViewById<TextView>(R.id.txtConfig)
 
         val configText = """
-            BASE URL :  ${BuildConfig.APP_BASE_URL}
-            MAP_KEY :  ${getString(R.string.maps_key)}
-            RE-ATTEMPT :  ${BuildConfig.APP_RETRY_ATTEMPTS}
-            THRESHOLD VALUE :  ${BuildConfig.APP_THRESHOLD_VALUE}
+            BASE URL :  ${BuildConfig.BASE_URL}
+            MAP_KEY :  ${BuildConfig.API_KEY}
+            RE-ATTEMPT :  ${BuildConfig.GATEWAY}
+            THRESHOLD VALUE :  ${BuildConfig.APPTYPE}
         """.trimIndent()
 
         txtConfig.text = configText

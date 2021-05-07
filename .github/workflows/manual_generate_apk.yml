@@ -14,18 +14,29 @@ on:
         required: true
         default: 'https://production.example.com/api/v1'
 
-      mapKey:
-        description: 'Map Key'
+      apiKey:
+        description: 'Api Key'
         required: true
-        default: 'production_sample_key'
+        default: 'BE url'
 
-      reAttempt:
-        description: 'Number of re-attempts'
-        default: '3'
+      gateway:
+        description: 'Gateway'
+        required: true
+        default: 'v1'
 
-      thresholdValue:
-        description: 'Threshold value'
-        default: '0.05'
+      appType:
+        description: 'Apptype'
+        required: true
+        default: 'android'
+
+
+#      reAttempt:
+#        description: 'Number of re-attempts'
+#        default: '3'
+#
+#      thresholdValue:
+#        description: 'Threshold value'
+#        default: '0.05'
 
 jobs:
 
@@ -42,7 +53,7 @@ jobs:
 
       - name: Print Params Values
         run: |
-          bash update_properties.sh ${{ github.event.inputs.baseUrl }} ${{ github.event.inputs.mapKey }} ${{ github.event.inputs.reAttempt }} ${{ github.event.inputs.thresholdValue }}
+          bash update_properties.sh ${{ github.event.inputs.baseUrl }} ${{ github.event.inputs.apiKey }} ${{ github.event.inputs.gateway }} ${{ github.event.inputs.appType }}
       - name: Assemble app debug APK
         run: bash ./gradlew assembleDebug --stacktrace
 
