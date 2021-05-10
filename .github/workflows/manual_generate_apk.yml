@@ -29,14 +29,6 @@ on:
         required: true
         default: 'android'
 
-#      reAttempt:
-#        description: 'Number of re-attempts'
-#        default: '3'
-#
-#      thresholdValue:
-#        description: 'Threshold value'
-#        default: '0.05'
-
 jobs:
 
   apk:
